@@ -1,0 +1,276 @@
+/* Component Styles */
+
+.card-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 35vh;
+    background-color: #5199CD;
+    border: 5px outset darkgreen;
+    border-radius: 30px;
+    margin: 1.5vh 3vw 3.5vh;
+    transform: perspective(1000px) rotateX(10deg);
+}
+
+
+.card-table__shadow,
+.card-table__identifier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 37vh;
+    border-radius: 30px;
+    background: hsl(0deg 0% 0% / 0.15);
+    transform: translateY(3deg) perspective(1000px) rotateX(10deg);
+}
+
+
+.card-table__identifier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.35;
+}
+
+
+.card-table__discard-pile {
+    align-self: center;
+    transform: perspective(1000px) rotateX(10deg);
+}
+
+
+.game-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Georama', sans-serif;
+    font-size: 1.15em;
+}
+
+
+.game-display__current-hand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.game-display__text {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+
+.sets-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: .25vh 4vw 0;
+    min-height: 16vh;
+    background-color: #E8C7B0;
+    border: 4px double #F5ADA3;
+}
+
+
+.game-explanation__header {
+    font-weight: bold;
+    font-size: 0.85em;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.game-explanation__bullets {
+    font-size: 0.75em;
+    font-style: italic;
+    font-family: 'Georama', sans-serif;
+}
+
+
+.set-display {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.set-display__score {
+    font-weight: bold;
+    font-size: 1.05em;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.set-display__moved-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* Button Styles */
+
+.buttons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2vh 0 0;
+}
+
+
+.buttons-row__button {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0 1.5vw;
+    padding: 0.5vh 1.25vw;
+    color: #F0EBD8;
+    background-color: #29648E;
+    transition-duration: 0.5s;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.buttons-row__button:after {
+    content: '';
+    border: 4.5px double #9AB2D5;
+    top: 1.5px;
+    left: 1.5px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    color: #f2f2f2;
+    white-space: nowrap;
+}
+
+
+.buttons-row__button:active {
+    top: 3px;
+    left: 3px;
+}
+
+
+.buttons-row__button:active:after {
+    top: -.5px;
+    left: -.5px;
+}
+
+
+.buttons-row__button:hover {
+    background-color: #3786BE;
+    color: #F0EBD8;
+}
+
+
+
+/* Card Styles */
+
+@keyframes initialLoad {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.card {
+    height: 90px;
+    width: 55px;
+    animation: initialLoad 3.5s;
+}
+
+
+.discarded-card {
+    height: 120px;
+    width: 95px;
+    transform: perspective(1000px) rotateX(15deg);
+}
+
+
+.moved-card {
+    height: 90px;
+    width: 55px;
+}
+
+
+
+/* Modal Styles */
+
+.landing-page-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-color: #C0DAED;
+    opacity: 0.925;
+    border-radius: 7px;
+    transition-duration: 10s;
+}
+
+
+.landing-page-modal__heading {
+    opacity: 0.85;
+    font-family: 'Georama', sans-serif;
+    font-size: 1.15em;
+    text-align: center;
+}
+
+
+.landing-page-modal__text {
+    opacity: 0.75;
+    font-family: 'Georama', sans-serif;
+    font-size: 0.95em;
+    text-align: left;
+    margin: 0 27.5vw;
+}
+
+
+.landing-page-modal__caption {
+    opacity: 0.65;
+    font-family: 'Georama', sans-serif;
+    font-size: 0.85em;
+    text-align: center;
+    font-style: italic;
+    padding: 10vh 0 0;
+}
+
+
+.error-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -400px;
+    z-index: 10;
+    height: 200px;
+    width: 800px;
+    background-color: #C0DAED;
+    opacity: 0.97;
+    border-radius: 7px;
+}
+
+
+.error-modal__heading {
+    opacity: 0.85;
+    font-family: 'Georama', sans-serif;
+    font-size: 1.15em;
+    text-align: center;
+}
+
+
+.error-modal__caption {
+    opacity: 0.65;
+    font-family: 'Georama', sans-serif;
+    font-size: 0.85em;
+    text-align: center;
+    font-style: italic;
+    padding: 10vh 0 0;
+}
