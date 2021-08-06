@@ -224,10 +224,13 @@ class PlayersHand extends React.Component {
         <div className="landing-page-modal" onClick={this.vanishStartModal}>
             <h1 className="landing-page-modal__heading">Welcome to the Hand Card Game</h1>
             <p className="landing-page-modal__text">
-              This card game is a very simplified version of Hand, a Jordanian variant similar to
-              Rummy. The objective of the game, played between you &amp; the computer, is to reach
+              What started out as a quest to emulate a Jordanian card game called 'Hand' resulted in an
+              exploration in building a simple card game to get my feet wet. Welcome to 'Set Roulette'! 
+              The objective of the game, played between you &amp; the computer, is to reach
               51 points in your set first. You can only add 1 card to your set &amp; discard 1 card
-              to the discard pile per turn.
+              to the discard pile per turn. Bear in mind that at the beginning of the game, you &amp; the 
+              computer both draw a card/number known as the 'death card'. If you happen to add a card from 
+              your hand to your set matching the 'death card', you automatically lose!
               <br/>
               <br/>
               Card values are as follows: 2-10 are worth 2-10 points respectively. J, Q, K are worth
