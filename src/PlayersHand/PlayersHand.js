@@ -67,7 +67,6 @@ class PlayersHand extends React.Component {
   manageTurn() {
     let currentTurnCount = Number(this.props.turnCount);
     if(this.state.discardPile.length < currentTurnCount) {
-      /* alert(`You must discard a card before ending your turn!`) */
       this.setState(prevState => ({
         endTurnErrorModal: !prevState.endTurnErrorModal
       }))
@@ -91,7 +90,6 @@ class PlayersHand extends React.Component {
     let currentTurnCount = Number(this.props.turnCount);
     let discardPileSize = Number(this.state.discardPile.length + 1);
     if(discardPileSize > currentTurnCount) {
-      /* alert(`You cannot discard more than one card!`) */
       this.setState(prevState => ({
         discardErrorModal: !prevState.discardErrorModal
       }))
@@ -124,7 +122,6 @@ class PlayersHand extends React.Component {
     let currentTurnCount = Number(this.props.turnCount);
     let setOnePileSize = Number(this.state.setOne.length + 1);
     if(setOnePileSize > currentTurnCount) {
-      /* alert(`You cannot move more than one card to your set!`) */
       this.setState(prevState => ({
         dragToSetErrorModal: !prevState.dragToSetErrorModal
       }))
