@@ -232,6 +232,9 @@ class PlayersHand extends React.Component {
               <br/>
               Card values are as follows: 2-10 are worth 2-10 points respectively. J, Q, K are worth
               10 points &amp; A is worth 11 points.
+              <br/>
+              <br/>
+              Please bear in mind that this game is only intended to be played on a desktop computer or laptop.
             </p>
             <caption className="landing-page-modal__caption">Click anywhere in the modal to continue to the game. . .</caption>
           </div>
